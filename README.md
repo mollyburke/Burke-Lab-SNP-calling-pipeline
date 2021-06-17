@@ -7,11 +7,11 @@ Pipeline written for the Burke Lab at Oregon State U by Shawn O'Neill, Dana Gibb
 This pipeline runs GATK 4.X on a set of populations/samples to produce two tables of parsed and filtered variant calls: filtered_snps.txt and 
 filtered_indels.txt. The outputs are tab-separated files of this format:
  
-#  Nmiss  CHROM    POS      REF  ALT  alt_sample1_sm  N_sample1_sm  alt_sample1_sm  N_sample2_sm  alt_sample2_sm
-#  0      chr1     1294     C    T    1               21            1               38            1
-#  0      chr1     1302     A    G    8               22            16              39            10
-#  0      chr1     1303     G    T    3               22            10              40            9
-#  0      chr1     1337     G    A    5               20            8               41            4
+Nmiss  CHROM    POS      REF  ALT  alt_sample1_sm  N_sample1_sm  alt_sample1_sm  N_sample2_sm  alt_sample2_sm
+0      chr1     1294     C    T    1               21            1               38            1
+0      chr1     1302     A    G    8               22            16              39            10
+0      chr1     1303     G    T    3               22            10              40            9
+0      chr1     1337     G    A    5               20            8               41            4
 
   
 For users at OSU, the run_pipeline.sh command can be customized and used with SGE tools configured for OSU's CGRB research computing cluster.  As written, the pipeline is unlikely to work outside this environment.
