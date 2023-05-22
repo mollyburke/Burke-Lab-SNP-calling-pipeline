@@ -117,7 +117,7 @@ ref=../reference/S288C_reference_sequence_R64-1-1_20110203.fasta
 bqsr_vcf=../reference/SGRP2-cerevisiae-freebayes-snps-Q30-GQ30.vcf
 
 ## Set the readgroup information file
-rg_info=
+rg_info=readgroup_metadata.csv
 
 ## Maximum number of missing samples allowed to include 
 ## a variant in the final output
@@ -153,7 +153,9 @@ fi
 ## with -b 10 (batch size of 10 -- only run this many concurrently)
 ## -m 50G (start jobs on machines with 50G free RAM, kill the jobs if they try to use more than this)
 ## -r fastq_to_vcf_logs (put output logs here, and name the job this)
-echo $samples | tr ' ' '\n' | awk -v ref="$ref" -v bqsr_vcf="$bqsr_vcf" -v rg_info="$rg_info" '{print "fastqs_to_recalbam.py --fastq_folder " $1 " --reference_fasta " ref " --bqsr_vcf " bqsr_vcf " --readgroup_info " rg_info }' \
+echo $samples | tr ' ' '\n' | awk -v ref="$ref" -v bqsr_vcf="$bqsr_vcf" -v rg_info="$rg_info" '{print "fastqs_to_recalbam.py --fastq_folder " $1 " --reference_fasta " ref " --bqsr_vcf " bqsr_vcf " --
+
+_info " rg_info }' \
   | SGE_Array -b 10 -m 50G -r pipeline_logs/fastq_to_recalbam_logs -P 4 -q $queue
 
 
