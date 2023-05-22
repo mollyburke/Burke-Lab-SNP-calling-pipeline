@@ -107,15 +107,15 @@ export PATH="/nfs3/IB/Burke_Lab/2021_Roundup/local/bin:$PATH"
 
 
 ## Pattern to use to match sample folders
-samples=ROUNDUP_*
+samples=POP_*
 
 
-## Set the reference to call against, and a VCF of known common snps to calibrage gatk against
+## Set the reference to call against, and a VCF of known common snps to calibrate gatk against
 ref=../reference/S288C_reference_sequence_R64-1-1_20110203.fasta
 bqsr_vcf=../reference/SGRP2-cerevisiae-freebayes-snps-Q30-GQ30.vcf
 
 ## Set the readgroup information file
-rg_info=cyc10_roundup_metadata.csv
+rg_info=readgroup_metadata.csv
 
 ## Maximum number of missing samples allowed to include 
 ## a variant in the final output
@@ -123,7 +123,7 @@ max_nmiss=0
 
 
 ## SGE Queue string
-queue=beagle
+queue=
 
 
 ## When it's all said and done, change everything to be writable by this group 
