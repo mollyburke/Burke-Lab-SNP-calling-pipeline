@@ -103,7 +103,7 @@
 ##############################
 
 ## add path to binaries and scripts
-export PATH="/nfs3/IB/Burke_Lab/2021_Roundup/local/bin:$PATH"
+export PATH=
 
 
 ## Pattern to use to match sample folders
