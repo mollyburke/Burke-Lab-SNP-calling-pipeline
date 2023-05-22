@@ -105,11 +105,11 @@
 ##############################
 
 ## add path to binaries and scripts
-export PATH="/nfs3/IB/Burke_Lab/McHugh/KM01/GWAS/local/bin:$PATH"
+export PATH=
 
 
 ## Pattern to use to match sample folders
-samples=GWAS_*
+samples=POP_*
 
 
 ## Set the reference to call against, and a VCF of known common snps to calibrate gatk against
@@ -117,7 +117,7 @@ ref=../reference/S288C_reference_sequence_R64-1-1_20110203.fasta
 bqsr_vcf=../reference/SGRP2-cerevisiae-freebayes-snps-Q30-GQ30.vcf
 
 ## Set the readgroup information file
-rg_info=GWAS_metadata_PE.csv
+rg_info=readgroup_metadata.csv
 
 ## Maximum number of missing samples allowed to include 
 ## a variant in the final output
@@ -129,7 +129,7 @@ iter_var="iter_2"
 mkdir ${iter_var}
 
 ## SGE Queue string
-queue=beagle
+queue=
 
 
 ## When it's all said and done, change everything to be writable by this group 
