@@ -105,11 +105,11 @@
 ##############################
 
 ## add path to binaries and scripts
-export PATH="/nfs3/IB/Burke_Lab/2021_Ethanol/local/bin:$PATH"
+export PATH=
 
 
 ## Pattern to use to match sample folders
-samples=ETH_*
+samples=POP_*
 
 
 ## Set the reference to call against, and a VCF of known common snps to calibrage gatk against
@@ -117,7 +117,7 @@ ref=../reference/S288C_reference_sequence_R64-1-1_20110203.fasta
 bqsr_vcf=../reference/SGRP2-cerevisiae-freebayes-snps-Q30-GQ30.vcf
 
 ## Set the readgroup information file
-rg_info=ethanol_metadata_PE.csv
+rg_info=
 
 ## Maximum number of missing samples allowed to include 
 ## a variant in the final output
@@ -125,7 +125,7 @@ max_nmiss=0
 
 
 ## SGE Queue string
-queue=beagle
+queue=
 
 
 ## When it's all said and done, change everything to be writable by this group 
